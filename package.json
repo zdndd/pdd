@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint --fix",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -19,6 +19,8 @@
     "@angular/platform-browser": "^14.3.0",
     "@angular/platform-browser-dynamic": "^14.3.0",
     "@angular/router": "^14.3.0",
+    "@ngrx/schematics": "^14.3.3",
+    "@ngrx/store": "^14.3.3",
     "@type-challenges/utils": "~0.1.1",
     "core-js": "~2.5.4",
     "rxjs": "~6.6.7",

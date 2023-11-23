@@ -23,16 +23,10 @@ export class HomeDetailComponent implements OnInit {
       filter((params) => params.has("tabLink")),
       map((params) => params.get("tabLink"))
     );
-    this.ad$ = this.selectedTabLink$
-      .pipe(
-        switchMap((tab) => this.service.getAdByTab(tab)),
-        filter((ads) => ads.length > 0),
-        map((ads) => ads[0])
-      )
-      .subscribe({
-        error: (error) => {
-          console.log(error);
-        },
-      });
+    this.ad$ = this.selectedTabLink$.pipe(
+      switchMap((tab) => this.service.getAdByTab(tab)),
+      filter((ads) => ads.length > 0),
+      map((ads) => ads[0])
+    );
   }
 }
